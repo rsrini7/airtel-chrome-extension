@@ -1,63 +1,79 @@
 <!doctype html>
 
 <style>
-	body {
-		font-family: sans-serif;
-		font-size: 12px;
-
-		width: 200px;
-		color: #111;
-	}
-
-	#loading, #details, #error {
-		display: none;
-	}
-
-	#loading {
-		text-align: center;
-		margin: 40px 0;
-		color: #bbb;
-	}
-
-	#details {
-		display: none;
-	}
-
-	meter {
-		display: block;
-		width: 100%;
-		margin-bottom: 5px;
-	}
-
-	h1 {
-		font-size: 14px;
-	}
-
-	footer {
-		color: #bbb;
-		margin-top: 10px;
-		font-size: 11px;
-	}
-
-	.percentage { float: right; font-size: 12px; }
-	.gist { font-size: 12px; font-weight: bold; }
-
-	.loading #loading { display: block; }
-	.details #details { display: block; }
-	.error #error { display: block; }
+    body {
+        font-family: sans-serif;
+        font-size: 12px;
+        width: 200px;
+        color: #111;
+    }
+    
+    #loading,
+    #details,
+    #error {
+        display: none;
+    }
+    
+    #loading {
+        text-align: center;
+        margin: 40px 0;
+        color: #bbb;
+    }
+    
+    #details {
+        display: none;
+    }
+    
+    meter {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    h1 {
+        font-size: 14px;
+    }
+    
+    footer {
+        color: #bbb;
+        margin-top: 10px;
+        font-size: 11px;
+    }
+    
+    .percentage {
+        float: right;
+        font-size: 12px;
+    }
+    
+    .gist {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+    .loading #loading {
+        display: block;
+    }
+    
+    .details #details {
+        display: block;
+    }
+    
+    .error #error {
+        display: block;
+    }
 </style>
 
 <body class="loading">
-	<div id="loading">Loading&hellip;</div>
+    <div id="loading">Loading&hellip;</div>
 
-	<div id="details"></div>
+    <div id="details"></div>
 
-	<div id="error">
-		<h1>Something's wrong</h1>
-		<p>This extension only works if you are connected to an Airtel broadband connection.</p>
-	</div>
+    <div id="error">
+        <h1>Something's wrong</h1>
+        <p>This extension only works if you are connected to an Airtel broadband connection.</p>
+    </div>
 
-	<template id="detailsTemplate">
+    <template id="detailsTemplate">
 		<meter min="0" max="100" value="90">30 GB</meter>
 		<div class="percentage">${used}% used</div>
 		<div class="gist">
@@ -69,5 +85,6 @@
 		</footer>
 	</template>
 
-	<script src="popup.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="popup.js"></script>
 </body>
